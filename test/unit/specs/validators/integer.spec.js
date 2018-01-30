@@ -47,6 +47,8 @@ describe('integer validator', () => {
 
   it('should not validate decimal numbers', () => {
     expect(integer('0.1')).to.be.false
+    expect(integer('1.0')).to.be.false
+    expect(integer('1.')).to.be.false
   })
 
   it('should not validate negative decimal numbers', () => {
